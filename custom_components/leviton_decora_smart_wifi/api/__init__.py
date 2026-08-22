@@ -207,7 +207,7 @@ class LevitonAPI:
         """
         try:
             response = function()
-        except (requests.exceptions.ConnectionError, requests.exceptions.Timeout):
+        except requests.exceptions.ConnectionError, requests.exceptions.Timeout:
             _LOGGER.warning(
                 "Leviton REST connection dropped or timed out; retrying with"
                 " fresh session"
